@@ -14,6 +14,10 @@ STDThreadKit
 C++ `std::thread` API for Swift
 -------------------------------
 
+### Documentation
+
+Documentation and API reference can be found at: http://doc.xs-labs.com/STDThreadKit/
+
 ### Rationale
 
 Swift has several APIs to execute threads, or concurrent tasks.

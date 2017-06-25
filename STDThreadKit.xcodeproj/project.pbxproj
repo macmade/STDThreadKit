@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		055EF4711EFBE78100E610CF /* STDThreadKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055EF4671EFBE78100E610CF /* STDThreadKit.framework */; };
 		055EF4AA1EFBE83E00E610CF /* STDThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055EF4A61EFBE83B00E610CF /* STDThread.swift */; };
-		055F43371EFD52F800F3751D /* STDThreadKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F43361EFD52DE00F3751D /* STDThreadKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055F43381EFD52FD00F3751D /* STDThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F43341EFD52DE00F3751D /* STDThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055F433A1EFD530600F3751D /* STDThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055F43351EFD52DE00F3751D /* STDThread.mm */; };
+		05B3A0471F003CE100524F81 /* STDThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B3A0451F003CDD00524F81 /* STDThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B3A0481F003CE500524F81 /* STDThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05B3A0441F003CDD00524F81 /* STDThread.mm */; };
+		05B3A0491F003CE800524F81 /* STDThreadKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B3A0461F003CDD00524F81 /* STDThreadKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +32,11 @@
 		055EF46B1EFBE78100E610CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055EF4701EFBE78100E610CF /* STDThreadKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STDThreadKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		055EF4A61EFBE83B00E610CF /* STDThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STDThread.swift; sourceTree = "<group>"; };
-		055F43341EFD52DE00F3751D /* STDThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDThread.h; sourceTree = "<group>"; };
-		055F43351EFD52DE00F3751D /* STDThread.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = STDThread.mm; sourceTree = "<group>"; };
-		055F43361EFD52DE00F3751D /* STDThreadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDThreadKit.h; sourceTree = "<group>"; };
+		05B3A0411F0032BC00524F81 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		05B3A0441F003CDD00524F81 /* STDThread.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = STDThread.mm; sourceTree = "<group>"; };
+		05B3A0451F003CDD00524F81 /* STDThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDThread.h; sourceTree = "<group>"; };
+		05B3A0461F003CDD00524F81 /* STDThreadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDThreadKit.h; sourceTree = "<group>"; };
+		05B3A04A1F003D0F00524F81 /* jazzy.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = jazzy.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0551EAFF1EFC25D900D137B9 /* README.md */,
 				055EF4691EFBE78100E610CF /* STDThreadKit */,
 				055EF4741EFBE78100E610CF /* STDThreadKitTests */,
+				05B3A0401F0032BC00524F81 /* Documentation */,
 				055EF4681EFBE78100E610CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +82,9 @@
 		055EF4691EFBE78100E610CF /* STDThreadKit */ = {
 			isa = PBXGroup;
 			children = (
-				055EF48C1EFBE7EA00E610CF /* Source */,
+				05B3A0451F003CDD00524F81 /* STDThread.h */,
+				05B3A0441F003CDD00524F81 /* STDThread.mm */,
+				05B3A0461F003CDD00524F81 /* STDThreadKit.h */,
 				055EF46B1EFBE78100E610CF /* Info.plist */,
 			);
 			path = STDThreadKit;
@@ -94,14 +99,13 @@
 			path = STDThreadKitTests;
 			sourceTree = "<group>";
 		};
-		055EF48C1EFBE7EA00E610CF /* Source */ = {
+		05B3A0401F0032BC00524F81 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				055F43341EFD52DE00F3751D /* STDThread.h */,
-				055F43351EFD52DE00F3751D /* STDThread.mm */,
-				055F43361EFD52DE00F3751D /* STDThreadKit.h */,
+				05B3A04A1F003D0F00524F81 /* jazzy.yml */,
+				05B3A0411F0032BC00524F81 /* Makefile */,
 			);
-			path = Source;
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,8 +115,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F43381EFD52FD00F3751D /* STDThread.h in Headers */,
-				055F43371EFD52F800F3751D /* STDThreadKit.h in Headers */,
+				05B3A0471F003CE100524F81 /* STDThread.h in Headers */,
+				05B3A0491F003CE800524F81 /* STDThreadKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F433A1EFD530600F3751D /* STDThread.mm in Sources */,
+				05B3A0481F003CE500524F81 /* STDThread.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,7 @@
 		055EF47C1EFBE78100E610CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -507,12 +512,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.STDThreadKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		055EF47D1EFBE78100E610CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -524,12 +532,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.STDThreadKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		055EF47F1EFBE78100E610CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = STDThreadKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.STDThreadKitTests";
@@ -540,6 +550,7 @@
 		055EF4801EFBE78100E610CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = STDThreadKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.STDThreadKitTests";

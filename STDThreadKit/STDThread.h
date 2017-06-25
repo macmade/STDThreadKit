@@ -22,11 +22,6 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-/*!
- * @header      STDThread.h
- * @copyright   (c) 2017, Jean-David Gadina - www.xs-labs.com
- */
-
 #ifndef __has_feature
 #define __has_feature( _x_ ) 0
 #endif
@@ -39,15 +34,50 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * Objective-C wrapper class for C++ `std::thread`
+ */
 @interface STDThread: NSObject
 
+/**
+ * Designated initializer.
+ * 
+ * Note that initializing a `STDThread` object will launch a new thread
+ * immediately.
+ * 
+ * @param       closure     The closure/block to execute in the new thread.
+ * @returns     The initialized instance.
+ */
 - ( instancetype )initWithClosure: ( void ( ^ )( void ) )closure NS_DESIGNATED_INITIALIZER;
 
-@property(        nonatomic, readonly ) BOOL         joinable;
+/**
+ * Whether the thread is joinable.
+ */
+@property( nonatomic, readonly ) BOOL joinable;
+
+/**
+ * The number of concurrent threads supported by the implementation.
+ * The value should be considered only a hint.
+ */
 @property( class, nonatomic, readonly ) unsigned int hardwareConcurrency;
 
-- ( BOOL )join:   ( NSError * __autoreleasing * )error;
-- ( BOOL )detach: ( NSError * __autoreleasing * )error;
+/**
+ * Waits for a thread to finish its execution.
+ * 
+ * @param       error   An optional error object indicating any error upon
+ *                      return.
+ * @returns     YES if the thread was successcvully joined, otherwise NO.
+ */
+- ( BOOL )join: ( NSError * __autoreleasing * _Nullable )error;
+
+/**
+ * Permits the thread to execute independently from the thread handle.
+ * 
+ * @param       error   An optional error object indicating any error upon
+ *                      return.
+ * @returns     YES if the thread was successcvully detached, otherwise NO.
+ */
+- ( BOOL )detach: ( NSError * __autoreleasing * _Nullable )error;
 
 @end
 
